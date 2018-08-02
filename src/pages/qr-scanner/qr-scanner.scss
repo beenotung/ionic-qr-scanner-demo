@@ -1,0 +1,25 @@
+page-qr-scanner {
+  ion-content {
+    display: inherit !important;
+
+    [ion-text], h1, code {
+      color: white;
+    }
+  }
+}
+
+/* fix for qr scanner preview */
+.transparentBody {
+  &, ion-content, body, .app-root, ion-app, .scroll-content, .fixed-content, page-qr-scanner {
+    background: none transparent !important;
+  }
+  ng-component {
+    display: none;
+  }
+}
+
+.transparentBody.no-cordova {
+  &, ion-content, body, .app-root, ion-app, .scroll-content, .fixed-content, page-qr-scanner {
+    background: black !important;
+  }
+}
